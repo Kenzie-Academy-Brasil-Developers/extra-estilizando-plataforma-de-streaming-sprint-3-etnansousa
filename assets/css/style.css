@@ -29,7 +29,13 @@ family=Lato -> Títulos, textos
 /* FONTS */
 
 /* VARIÁVEIS */
-:root{}
+:root{
+    --background-color-principal: #141414;
+    --font-color-principal: white;
+    --fontColor-secondary: #e5e5e5;
+    --menu-fontColor-active: white;
+    --menu-fontColor-hover: #b3b3b3;
+}
   
 /* GERAL */
 html, body, figure, div, input, textarea, p, h1, h2, h3, h4, h5, h6, ul{
@@ -39,12 +45,25 @@ html, body, figure, div, input, textarea, p, h1, h2, h3, h4, h5, h6, ul{
     font-family: sans-serif;
     list-style: none;
 }
-img{
-    max-width: 800px;
+
+figure {
+    line-height: 0;
 }
-div.flex{
+img{
+    max-width: 100%;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+.flex{
     display: flex;
 }
+
+.hidden {
+    display: none;
+}
+
 div.full-container{
     width: 100%;
     max-width: 1850px;
@@ -61,26 +80,288 @@ div.container{
     margin:0 auto;
 }
 /* GERAL */
-  
-/* HTML */
-html{}
-/* HTML */
-  
-/* BODY */
-body{}
-/* BODY */
-  
-/* HEADER */
-header{}
-/* HEADER */
-  
-/* FOOTER */
-footer{}
-/* FOOTER */
+/* 
+bullet play 25B6
+lupa 26B2
+seta para baico 25bc 
 
-/* INICIAL */
-main{}
-/* INICIAL */
+fazer um menu flutante pegando toda a tela, mas em parte apenas transparente
+
+*/
+
+/* HTML */
+html{
+    font-family: 'Helvetica Neue', Helvetica, Arial,sans-serif;
+}
+/* HTML */
+
+/* BODY */
+body {
+    background: var(--background-color-principal);
+}
+
+.mainContainer {
+    padding-top: 20px;
+    flex-direction: column;
+    color: var(--font-color-principal);
+    position: relative;
+}
+/* BODY */
+  
+/* HEADER */
+.mainHeader {
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+}
+
+    .mainHeader__Logo {
+        width: 70px;
+    }
+
+    .mainHeader__menu {
+        flex: 1;
+        padding-left: 30px;
+        font-size: 0.6em;
+    }
+
+        .menu__title::after {
+            content: "\25bc";
+            margin-left: 5px;
+            font-size: 1.2em;
+        }
+        
+        #menu:checked ~ .menu__list {
+            position: fixed;
+            right: 0;
+            left: 0;
+            top: 0;
+            height: 100vh;
+            background: rgb(20 20 20 / 90%);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end; 
+            align-content: center;
+            align-items: center;
+            font-size: 5vmin;
+            line-height: 2em;
+            color: var(--fontColor-secondary);
+            z-index: 1; 
+        }
+
+        #menu:checked ~ .menu__list .btn__out {
+            height: 40vh;
+            display: flex;
+            align-items: flex-end;
+            box-sizing: border-box;
+            padding-bottom: 10px;
+        }
+
+        #menu:checked ~ .menu__list .btn__out label::after {
+            content: "\2715";
+            background: white;
+            display: block;
+            height: 15vmin;
+            width: 15vmin;
+            color: black;
+            font-size: 8vmin;
+            line-height: 15vmin;
+            text-align: center;
+            border-radius: 50%;
+        }
+
+            #menu:checked ~ .menu__list .menu__item:first-child {
+                font-size: 1.1em;
+                font-weight: bold;
+            }
+    
+    .mainHeader__user {
+        width: 28px;
+    }
+    
+    .mainHeader__user img {
+        border-radius: 8px;
+    }
+
+    .mainHeader__searchBlock {
+        margin-right: 20px;
+    }
+
+        .search__button {
+            transform: rotate(-45deg);
+        }
+
+        .search__button::before {
+            content: "\26b2";
+            font-size: 25px;
+        }
+/* HEADER */
+
+/* CONTEÚDO */
+
+.mainContent {
+    flex-direction: column;
+}
+
+    .mainContent__secDestaque {
+        flex-direction: column;
+        padding: 0 30px;
+        font-size: 12px;
+        text-shadow: 2px 2px 4px rgb(0 0 0 / 45);
+    }
+
+        .secDestaque__flexItem {
+            margin-top: 10px;
+        }
+        
+        .secDestaque__capa {
+            justify-content: center;
+            position: fixed;
+            right: 0;
+            left: 0;
+            top: 0;
+            z-index: -1;
+        }
+
+        .secDestaque__capa::before {
+            content: "";
+            background: linear-gradient(to bottom, rgb(0 0 0 / 80%), rgb(0 0 0 / 0), 40%, rgb(0 0 0 / 10%), 93%, rgb(0 0 0 / 70%));
+            position: absolute;
+            height: 100%;
+            right: 0;
+            left: 0;
+            top: 0;
+        }
+
+        .secDestaque__arte {
+            max-width: 160px;
+        }
+
+        .secDestaque__description {
+            width: 50%;
+        }
+
+            .buttons {
+                background: rgb(109 109 110 / 70%);
+                border: none;
+                border-radius: 5px;
+                font-size: 12px;
+                line-height: 2em;
+                margin-right: 5px;
+                padding: 0 15px;
+                color: inherit;
+
+            }
+
+            .button__assistir {
+                background: white;
+                color: black;
+            }
+
+            .button__assistir::before {
+                content: "\25b6";
+                margin-right: 10px;
+            }
+
+            .button__moreInfo {
+
+            }
+
+            .button__moreInfo::before {
+                content: "i";
+                margin-right: 5px;
+                display: inline-block;
+                padding: 0 0.4em;
+                line-height: 1em;
+                border: solid 2px;
+                border-radius: 50%;
+                font-weight: bold;
+            }
+
+    .catalogSection:nth-child(n + 3) {
+        padding-top: 20px;
+        background: var(--background-color-principal);
+    }
+
+    .catalogSection {
+        padding-bottom: 50px;
+    }
+
+    .catalogSection:last-child {
+        padding-bottom: 100px;
+    }
+
+        .largeOriginals {
+            display: none;
+        }
+
+        .sectionItem {
+            padding: 0 30px;
+        }
+
+        .sectionTitle {
+            font-size: 17px;
+            line-height: 1.5em;
+        }
+
+        .filmsBlock {
+            flex-wrap: wrap;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+            .filmsBlock__card {
+                width: calc(50% - 2px);
+                max-width: 50%;
+            }
+
+            .filmsBlock__card img {
+                border-radius: 8px;
+            }
+
+        .secContWatching {
+            background: linear-gradient(to bottom,rgba(20,20,20,0) 0,rgba(20,20,20,.15) 15%,rgba(20,20,20,.35) 29%,rgba(20,20,20,.58) 44%,#141414 68%,#141414 100%);
+        }
+/* CONTEÚDO */
+  
+/* FOOTER */
+.mainFooter{
+    color: gray;
+    background: var(--background-color-principal);
+}
+
+    .footer__container {
+        padding: 30px 30px 20px;
+    }
+
+    .mainFooter__item {
+        margin-top: 20px;
+    }
+
+    .mainFooter__menu {
+        flex-wrap: wrap;
+        font-size: 13px;
+    }
+
+    .mainFooter__menu li {
+        width: 50%;
+        margin: 5px 0;
+    }
+
+    .mainFooter__socials {
+        width: 50%;
+        justify-content: space-between;
+    }
+
+    .mainFooter__socials li {
+        width: 20px;
+    }
+
+    .mainFooter__copyright {
+        font-size: 11px;
+    }
+
+/* FOOTER */
 
 /* EXTRAS */
 
@@ -97,7 +378,141 @@ main{}
   
 
 /* MEDIA QUERIES */
-    @media screen and (min-width: 400px) {}
   
-    @media screen and (min-width: 800px) {}
+    @media screen and (min-width: 800px) {
+
+        .hover {
+            cursor: pointer;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            background: var(--background-color-principal);
+        }
+
+        .mainHeader, .sectionItem {
+            padding: 0 60px;
+        }
+
+        .mainContent__secDestaque {
+            padding: 7% 30% 7% 60px;
+            font-size: 26px;
+        }
+
+        .mainHeader__Logo {
+            width: 92px;
+        }
+
+        .mainHeader__user {
+            width: 32px;
+        }
+
+        .menu__title {
+            display: none;
+        }
+
+        .menu__list {
+            display: flex;
+            color: var(--fontColor-secondary);
+            font-size: 14px;
+        }
+
+        .menu__item {
+            margin: 0 10px;
+        }
+
+        .menu__item--active {
+            color: var(--menu-fontColor-active);
+            font-weight: bold;
+        }
+
+        .menu__item:hover {
+            color: var(--menu-fontColor-hover);
+        }
+        
+        .secDestaque__flexItem {
+            margin-top: 1em;
+        }
+
+        .secDestaque__capa img {
+            width: 100%;
+        }
+
+        .secDestaque__arte{
+            max-width: 650px;
+        }
+
+        .buttons {
+            font-size: 22px;
+        }
+
+        .button__moreInfo:hover {
+            background-color: rgb(109 109 110 / 40%);
+        }
+
+        .button__assistir:hover {
+            background: rgb(255 255 255 / 75%);
+        }
+
+        .normalOriginals {
+            display: none;
+        }
+
+        .largeOriginals {
+            display: block;
+        }
+
+        .sectionTitle {
+            font-size: 26px;
+            color: var(--fontColor-secondary);
+        }
+        
+        .filmsBlock__card {
+            width: calc((100% / 6) - 2px);
+            max-width: 287px;
+        }
+
+        .mainFooter {
+            padding: 0px 22%;
+        }
+
+        .footer__container {
+            padding: 20px 0 30px;
+            border-top: solid 1px rgb(128 128 128 / 26%);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .mainFooter__menu li {
+            width: 100%;
+            margin: 5px 0;
+        }
+
+        .mainFooter__socials {
+            width: 100px;
+            justify-content: space-between;
+        }
+
+        .mainFooter__copyright {
+            width: 100%;
+        }
+        
+    }
+
+    @media screen and (min-width: 1735px) {
+
+        .mainContainer {
+            position: relative;
+        }
+        
+        .mainContainer, .secDestaque__capa {
+            max-width: 1735px;
+        }
+
+        .secDestaque__capa {
+            position: absolute;
+        }
+    }
 /* MEDIA QUERIES */
