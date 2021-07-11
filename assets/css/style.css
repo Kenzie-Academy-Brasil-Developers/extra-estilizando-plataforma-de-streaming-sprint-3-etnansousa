@@ -42,7 +42,7 @@ html, body, figure, div, input, textarea, p, h1, h2, h3, h4, h5, h6, ul{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: 'Helvetica Neue', Helvetica, Arial,sans-serif;
     list-style: none;
 }
 
@@ -56,6 +56,7 @@ a {
     text-decoration: none;
     color: inherit;
 }
+
 .flex{
     display: flex;
 }
@@ -64,36 +65,14 @@ a {
     display: none;
 }
 
-div.full-container{
-    width: 100%;
-    max-width: 1850px;
-    margin:0 auto;
-}
-div.large-container{
-    width: 100%;
-    max-width: 1170px;
-    margin:0 auto;
-}
-div.container{
-    width: 100%;
-    max-width: 1140px;
-    margin:0 auto;
-}
 /* GERAL */
 /* 
 bullet play 25B6
 lupa 26B2
-seta para baico 25bc 
-
-fazer um menu flutante pegando toda a tela, mas em parte apenas transparente
+seta para baixo 25bc
+cruz 2715
 
 */
-
-/* HTML */
-html{
-    font-family: 'Helvetica Neue', Helvetica, Arial,sans-serif;
-}
-/* HTML */
 
 /* BODY */
 body {
@@ -101,7 +80,6 @@ body {
 }
 
 .mainContainer {
-    padding-top: 20px;
     flex-direction: column;
     color: var(--font-color-principal);
     position: relative;
@@ -112,7 +90,7 @@ body {
 .mainHeader {
     justify-content: space-between;
     align-items: center;
-    padding: 0 30px;
+    padding: 20px 30px;
 }
 
     .mainHeader__Logo {
@@ -188,20 +166,49 @@ body {
 
     .mainHeader__searchBlock {
         margin-right: 20px;
+        cursor: pointer;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        width: 200px;
     }
 
         .search__button {
             transform: rotate(-45deg);
+            position: relative;
+            right: 0;
+            transition: right .3s;
+        }
+
+        .search__button:active {
+            color: grey;
         }
 
         .search__button::before {
             content: "\26b2";
             font-size: 25px;
         }
+
+        .searchField {
+            position: relative;
+            top: -60px;
+            transition: .2s;
+            border-radius: 10px;
+            outline: none;
+        }
+
+        #searchCheck:checked ~ .searchField {
+            top: 0;
+            padding: 0 30px 0 10px;
+        }
+
+        #searchCheck:checked ~ .search__button {
+            color: gray;
+            right: 24px;
+            z-index: 1;
+        }
 /* HEADER */
 
 /* CONTEÚDO */
-
 .mainContent {
     flex-direction: column;
 }
@@ -210,7 +217,6 @@ body {
         flex-direction: column;
         padding: 0 30px;
         font-size: 12px;
-        text-shadow: 2px 2px 4px rgb(0 0 0 / 45);
     }
 
         .secDestaque__flexItem {
@@ -242,6 +248,7 @@ body {
 
         .secDestaque__description {
             width: 50%;
+            text-shadow: 2px 2px 4px rgb(0 0 0 / 45);
         }
 
             .buttons {
@@ -264,10 +271,6 @@ body {
             .button__assistir::before {
                 content: "\25b6";
                 margin-right: 10px;
-            }
-
-            .button__moreInfo {
-
             }
 
             .button__moreInfo::before {
@@ -293,10 +296,6 @@ body {
     .catalogSection:last-child {
         padding-bottom: 100px;
     }
-
-        .largeOriginals {
-            display: none;
-        }
 
         .sectionItem {
             padding: 0 30px;
@@ -363,25 +362,9 @@ body {
     .mainFooter__copyright {
         font-size: 11px;
     }
-
 /* FOOTER */
-
-/* EXTRAS */
-
-/* para estilizar a scrollbar */
-::-webkit-scrollbar{}
-::-webkit-scrollbar-button{}
-::-webkit-scrollbar-track{}
-::-webkit-scrollbar-track-piece{}
-::-webkit-scrollbar-thumb{}
-::-webkit-scrollbar-corner{}
-::-webkit-resizer{}
-
-/* EXTRAS */
   
-
-/* MEDIA QUERIES */
-  
+/* MEDIA QUERIES */  
     @media screen and (min-width: 800px) {
 
         .hover {
@@ -394,12 +377,17 @@ body {
             background: var(--background-color-principal);
         }
 
-        .mainHeader, .sectionItem {
+        .mainHeader {
+            padding: 20px 60px;
+            background: linear-gradient(to bottom, rgba(0,0,0,.7) 10%, rgba(0,0,0,0));
+        }
+
+        .sectionItem {
             padding: 0 60px;
         }
 
         .mainContent__secDestaque {
-            padding: 7% 30% 7% 60px;
+            padding: 6% 30% 6% 60px;
             font-size: 26px;
         }
 

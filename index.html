@@ -34,10 +34,12 @@
                         <li class="btn__out hidden"><label for="menu"></label></li>
                     </ul>
                 </nav>
-                <div class="mainHeader__searchBlock">
-                    <div class="search__button">
+                <div class="mainHeader__searchBlock flex">
+                    <input class="hidden" type="checkbox" id="searchCheck">
+                    <label class="search__button" for="searchCheck">
                         <span class="hidden">Ícone pesquisar</span>
-                    </div>
+                    </label>
+                    <input class="searchField" type="search" name="" id="searchFieldId">
                 </div>
                 <figure class="mainHeader__user">
                     <img src="./assets/img/user.png" alt="Ícone usuário">
@@ -226,7 +228,7 @@
                 </ul>
             </section>
 
-            <section class="catalogSection largeOriginals">
+            <section class="catalogSection largeOriginals hidden">
                 <h2 class="sectionItem sectionTitle">Originais Netflix</h2>
                 <ul class="sectionItem filmsBlock flex">
                     <li class="filmsBlock__card">
