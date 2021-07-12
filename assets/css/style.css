@@ -160,9 +160,9 @@ body {
         width: 28px;
     }
     
-    .mainHeader__user img {
-        border-radius: 8px;
-    }
+        .mainHeader__user img {
+            border-radius: 8px;
+        }
 
     .mainHeader__searchBlock {
         margin-right: 20px;
@@ -293,9 +293,9 @@ body {
         padding-bottom: 50px;
     }
 
-    .catalogSection:last-child {
-        padding-bottom: 100px;
-    }
+        .catalogSection:last-child {
+            padding-bottom: 100px;
+        }
 
         .sectionItem {
             padding: 0 30px;
@@ -336,178 +336,197 @@ body {
         padding: 30px 30px 20px;
     }
 
-    .mainFooter__item {
-        margin-top: 20px;
-    }
+        .mainFooter__item {
+            margin-top: 20px;
+        }
 
-    .mainFooter__menu {
-        flex-wrap: wrap;
-        font-size: 13px;
-    }
+        .mainFooter__menu {
+            flex-wrap: wrap;
+            font-size: 13px;
+        }
 
-    .mainFooter__menu li {
-        width: 50%;
-        margin: 5px 0;
-    }
+            .mainFooter__menu li {
+                width: 50%;
+                margin: 5px 0;
+            }
 
-    .mainFooter__socials {
-        width: 50%;
-        justify-content: space-between;
-    }
+        .mainFooter__socials {
+            width: 50%;
+            justify-content: space-between;
+        }
 
-    .mainFooter__socials li {
-        width: 20px;
-    }
+            .mainFooter__socials li {
+                width: 20px;
+            }
 
-    .mainFooter__copyright {
-        font-size: 11px;
-    }
+        .mainFooter__copyright {
+            font-size: 11px;
+        }
 /* FOOTER */
   
 /* MEDIA QUERIES */  
-    @media screen and (min-width: 800px) {
+@media screen and (min-width: 800px) {
 
-        .hover {
-            cursor: pointer;
-        }
+    .hover {
+        cursor: pointer;
+    }
 
-        body {
-            display: flex;
-            justify-content: center;
-            background: var(--background-color-principal);
-        }
+    body {
+        display: flex;
+        justify-content: center;
+        background: var(--background-color-principal);
+    }
 
-        .mainHeader {
-            padding: 20px 60px;
-            background: linear-gradient(to bottom, rgba(0,0,0,.7) 10%, rgba(0,0,0,0));
-        }
-
-        .sectionItem {
-            padding: 0 60px;
-        }
-
-        .mainContent__secDestaque {
-            padding: 6% 30% 6% 60px;
-            font-size: 26px;
-        }
-
+    .mainHeader {
+        padding: 20px 60px;
+        background: linear-gradient(to bottom, rgba(0,0,0,.7) 10%, rgba(0,0,0,0));
+    }
+    
         .mainHeader__Logo {
             width: 92px;
         }
-
+        
         .mainHeader__user {
             width: 32px;
         }
-
+        
         .menu__title {
             display: none;
         }
-
+        
         .menu__list {
             display: flex;
             color: var(--fontColor-secondary);
             font-size: 14px;
         }
-
-        .menu__item {
-            margin: 0 10px;
-        }
-
-        .menu__item--active {
-            color: var(--menu-fontColor-active);
-            font-weight: bold;
-        }
-
-        .menu__item:hover {
-            color: var(--menu-fontColor-hover);
-        }
         
+            .menu__item {
+                margin: 0 10px;
+            }
+            
+                .menu__item--active {
+                    color: var(--menu-fontColor-active);
+                    font-weight: bold;
+                }
+                
+                .menu__item:hover {
+                    color: var(--menu-fontColor-hover);
+                }
+    
+    .mainContent__secDestaque {
+        padding: 6% 30% 6% 60px;
+        font-size: 26px;
+    }
+    
         .secDestaque__flexItem {
             margin-top: 1em;
         }
-
+    
         .secDestaque__capa img {
             width: 100%;
         }
-
+    
         .secDestaque__arte{
             max-width: 650px;
         }
-
-        .secDestaque__arte img {
-            width: 100%;
-        }
-
+    
+            .secDestaque__arte img {
+                width: 100%;
+            }
+    
         .buttons {
             font-size: 22px;
         }
-
-        .button__moreInfo:hover {
-            background-color: rgb(109 109 110 / 40%);
-        }
-
-        .button__assistir:hover {
-            background: rgb(255 255 255 / 75%);
-        }
-
-        .normalOriginals {
-            display: none;
-        }
-
-        .largeOriginals {
-            display: block;
-        }
-
-        .sectionTitle {
-            font-size: 26px;
-            color: var(--fontColor-secondary);
-        }
         
+            .button__moreInfo:hover {
+                background-color: rgb(109 109 110 / 40%);
+            }
+            
+            .button__assistir:hover {
+                background: rgb(255 255 255 / 75%);
+            }
+
+    .sectionItem {
+        padding: 0 60px;
+    }
+    
+    .normalOriginals {
+        display: none;
+    }
+
+    .largeOriginals {
+        display: block;
+    }
+
+    .sectionTitle {
+        font-size: 26px;
+        color: var(--fontColor-secondary);
+    }
+
+    .filmsBlock {
+        flex-wrap: nowrap;
+    }
+    
         .filmsBlock__card {
-            width: calc((100% / 6) - 2px);
             max-width: 287px;
         }
-
-        .mainFooter {
-            padding: 0px 22%;
-        }
-
-        .footer__container {
-            padding: 20px 0 30px;
-            border-top: solid 1px rgb(128 128 128 / 26%);
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
-
-        .mainFooter__menu li {
-            width: 100%;
-            margin: 5px 0;
-        }
-
-        .mainFooter__socials {
-            width: 100px;
-            justify-content: space-between;
-        }
-
-        .mainFooter__copyright {
-            width: 100%;
-        }
         
+        .filmsBlock__card:nth-child(-n + 5) figure{
+            padding-right: 5px;
+        }
+
+    .mainFooter {
+        padding: 0px 22%;
     }
 
-    @media screen and (min-width: 1735px) {
-
-        .mainContainer {
-            position: relative;
-        }
-        
-        .mainContainer, .secDestaque__capa {
-            max-width: 1735px;
-        }
-
-        .secDestaque__capa {
-            position: absolute;
-        }
+    .footer__container {
+        padding: 20px 0 30px;
+        border-top: solid 1px rgb(128 128 128 / 26%);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
     }
+
+    .mainFooter__menu li {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .mainFooter__socials {
+        width: 100px;
+        justify-content: space-between;
+    }
+
+    .mainFooter__copyright {
+        width: 100%;
+    }
+    
+}
+
+@media screen and (min-width: 1735px) {
+    
+    .mainHeader {
+        padding: 20px 0;
+    }
+    
+    .sectionItem {
+        padding: 0;
+    }
+
+    .filmsBlock__card:nth-child(-n + 5) figure{
+        padding-right: 0;
+    }
+    
+    .mainContainer {
+        position: relative;
+    }
+    
+    .mainContainer, .secDestaque__capa {
+        max-width: 1735px;
+    }
+
+    .secDestaque__capa {
+        position: absolute;
+    }
+}
 /* MEDIA QUERIES */
