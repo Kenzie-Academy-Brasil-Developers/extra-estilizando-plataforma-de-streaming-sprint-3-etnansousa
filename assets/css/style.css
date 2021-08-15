@@ -1,34 +1,6 @@
 
-/*
-Theme Name: Landing Page Kenzie Academy
-Theme URI: https://kenzie.com.br/
-Author: Kenzie Academy 
-Author URI: https://kenzie.com.br/
-Description: Descrção do thema.
-Version: 1.0
-Text Domain: https://kenzie.com.br/
-
---------------------------------------------
-ESTRUTURAÇÃO BASE
---------------------------------------------
-**** DECLARAÇÃO DE VARIÁVEIS
-**** ESTILOS GERAIS
-**** BODY
-**** HEADER
-**** FOOTER
-**** PÁGINA INICIAL
-**** EXTRAS
-**** @MEDIA
-
-family=Montserrat -> Menus
-family=Lato -> Títulos, textos
-*/
-
-/* FONTS */
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-/* FONTS */
 
-/* VARIÁVEIS */
 :root{
     --background-color-principal: #141414;
     --font-color-principal: white;
@@ -36,8 +8,7 @@ family=Lato -> Títulos, textos
     --menu-fontColor-active: white;
     --menu-fontColor-hover: #b3b3b3;
 }
-  
-/* GERAL */
+
 html, body, figure, div, input, textarea, p, h1, h2, h3, h4, h5, h6, ul{
     margin: 0;
     padding: 0;
@@ -65,16 +36,6 @@ a {
     display: none;
 }
 
-/* GERAL */
-/* 
-bullet play 25B6
-lupa 26B2
-seta para baixo 25bc
-cruz 2715
-
-*/
-
-/* BODY */
 body {
     background: var(--background-color-principal);
 }
@@ -84,9 +45,7 @@ body {
     color: var(--font-color-principal);
     position: relative;
 }
-/* BODY */
-  
-/* HEADER */
+
 .mainHeader {
     justify-content: space-between;
     align-items: center;
@@ -206,9 +165,7 @@ body {
             right: 24px;
             z-index: 1;
         }
-/* HEADER */
-
-/* CONTEÚDO */
+        
 .mainContent {
     flex-direction: column;
 }
@@ -324,9 +281,7 @@ body {
         .secContWatching {
             background: linear-gradient(to bottom,rgba(20,20,20,0) 0,rgba(20,20,20,.15) 15%,rgba(20,20,20,.35) 29%,rgba(20,20,20,.58) 44%,#141414 68%,#141414 100%);
         }
-/* CONTEÚDO */
-  
-/* FOOTER */
+        
 .mainFooter{
     color: gray;
     background: var(--background-color-principal);
@@ -362,9 +317,7 @@ body {
         .mainFooter__copyright {
             font-size: 11px;
         }
-/* FOOTER */
-  
-/* MEDIA QUERIES */  
+        
 @media screen and (min-width: 800px) {
 
     .hover {
@@ -522,6 +475,7 @@ body {
     }
     
     .mainContainer, .secDestaque__capa {
+        width: 100%;
         max-width: 1735px;
     }
 
@@ -529,4 +483,3 @@ body {
         position: absolute;
     }
 }
-/* MEDIA QUERIES */
