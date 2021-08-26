@@ -21,7 +21,7 @@ figure {
     line-height: 0;
 }
 img{
-    max-width: 100%;
+    width: 100%;
 }
 a {
     text-decoration: none;
@@ -44,6 +44,8 @@ body {
     flex-direction: column;
     color: var(--font-color-principal);
     position: relative;
+    max-width: 1735px;
+    margin: 0 auto;
 }
 
 .mainHeader {
@@ -53,7 +55,7 @@ body {
 }
 
     .mainHeader__Logo {
-        width: 70px;
+        max-width: 70px;
     }
 
     .mainHeader__menu {
@@ -128,7 +130,7 @@ body {
         cursor: pointer;
         flex-direction: row-reverse;
         justify-content: space-between;
-        width: 200px;
+        width: 50px;
     }
 
         .search__button {
@@ -156,8 +158,11 @@ body {
         }
 
         #searchCheck:checked ~ .searchField {
-            top: 0;
+            left: 54px;
+            top: 28px;
             padding: 0 30px 0 10px;
+            height: 27px;
+            width: 250px;
         }
 
         #searchCheck:checked ~ .search__button {
@@ -318,6 +323,14 @@ body {
             font-size: 11px;
         }
         
+@media screen and (min-width: 550px) {
+    #searchCheck:checked ~ .searchField {
+        left: 0;
+        top: 0;
+        height: unset;
+    }
+}
+        
 @media screen and (min-width: 800px) {
 
     .hover {
@@ -336,7 +349,7 @@ body {
     }
     
         .mainHeader__Logo {
-            width: 92px;
+            max-width: 92px;
         }
         
         .mainHeader__user {
@@ -365,6 +378,10 @@ body {
                 .menu__item:hover {
                     color: var(--menu-fontColor-hover);
                 }
+
+#searchCheck:checked ~ .searchField {
+   width: 130px;
+}
     
     .mainContent__secDestaque {
         padding: 6% 30% 6% 60px;
@@ -456,10 +473,16 @@ body {
     
 }
 
+@media screen and (min-width: 900px) {
+    #searchCheck:checked ~ .searchField {
+        width: 200px;
+     }
+}
+
 @media screen and (min-width: 1735px) {
     
     .mainHeader {
-        padding: 20px 0;
+        /* padding: 20px 0; */
     }
     
     .sectionItem {
@@ -476,7 +499,6 @@ body {
     
     .mainContainer, .secDestaque__capa {
         width: 100%;
-        max-width: 1735px;
     }
 
     .secDestaque__capa {

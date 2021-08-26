@@ -11,352 +11,350 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 
 </head>
-<body>
-    <div class="mainContainer flex">
-        <header class="mainHeader flex">
-                <a class="logo" href="#">
-                    <figure>
-                        <img class="mainHeader__Logo" src="./assets/img/logo.svg" alt="Logo netflix">
-                        <figcaption class="hidden">Logo netflix</figcaption>
-                    </figure>
-                </a>
-                <nav class="mainHeader__menu">
-
-                    <label class="menu__title" for="menu">Navegar</label>
-                    <input class="hidden" type="checkbox" id="menu">
-
-                    <ul class="menu__list hidden">
-                        <li class="menu__item menu__item--active"><a href="#">Início</a></li>
-                        <li class="menu__item"><a href="#">Séries</a></li>
-                        <li class="menu__item"><a href="#">Filmes</a></li>
-                        <li class="menu__item"><a href="#">Bombando</a></li>
-                        <li class="menu__item"><a href="#">Minha lista</a></li>
-                        <li class="btn__out hidden"><label for="menu"></label></li>
-                    </ul>
-                </nav>
-                <div class="mainHeader__searchBlock flex">
-                    <input class="hidden" type="checkbox" id="searchCheck">
-                    <label class="search__button" for="searchCheck">
-                        <span class="hidden">Ícone pesquisar</span>
-                    </label>
-                    <input class="searchField" type="search" name="" id="searchFieldId">
-                </div>
-                <figure class="mainHeader__user">
-                    <img src="./assets/img/user.png" alt="Ícone usuário">
-                    <figcaption class="hidden">Ícone usuário</figcaption>
+<body class="mainContainer flex">
+    <header class="mainHeader flex">
+            <a class="logo" href="#">
+                <figure class="mainHeader__Logo">
+                    <img src="./assets/img/logo.svg" alt="Logo netflix">
+                    <figcaption class="hidden">Logo netflix</figcaption>
                 </figure>
-        </header>
-        
-        <main class="mainContent flex">
-            <section class="mainContent__secDestaque flex">
-                <figure class="secDestaque__capa flex">
-                    <img src="./assets/img/movies/ted.webp" alt="Capa do título seção destaque">
-                    <figcaption class="hidden">Capa do título em destaque</figcaption>
-                </figure>
-                <figure class="secDestaque__flexItem secDestaque__arte">
-                    <img src="./assets/img/movies/tedlogo.webp" alt="Arte do título em destaque">
-                    <figcaption class="hidden">Arte do título em destaque</figcaption>
-                </figure>
-                <div class="secDestaque__flexItem secDestaque__description">
-                    <p>Ela o amava e queria acreditar nele. Mas a verdade era monstruosa demais para ser ignorada.</p>
-                </div>
-                <div class="secDestaque__flexItem secDestaque__buttonsBlock">
-                    <button class="buttons button__assistir hover">Assistir</button>
-                    <button class="buttons Item button__moreInfo hover">Mais informações</button>
-                </div>
-            </section>
+            </a>
+            <nav class="mainHeader__menu">
 
-            <section class="catalogSection secContWatching">
-                <h2 class="sectionItem sectionTitle">Continuar assistindo</h2>
-                <ul class="sectionItem filmsBlock flex">
-                    <li class="filmsBlock__card">
-                        <a href="#">
-                            <figure>
-                                <img src="./assets/img/movies/amigas.jpg" alt="Nome programa">
-                                <figcaption class="hidden">Nome programa</figcaption>
-                            </figure>
-                        </a>
-                    </li>
-                    <li class="filmsBlock__card">
-                        <a href="#">
-                            <figure>
-                                <img src="./assets/img/movies/gg.jpg" alt="Nome programa">
-                                <figcaption class="hidden">Nome programa</figcaption>
-                            </figure>
-                        </a>
-                    </li>
-                    <li class="filmsBlock__card">
-                        <a href="#">
-                            <figure>
-                                <img src="./assets/img/movies/papel.jpg" alt="Nome programa">
-                                <figcaption class="hidden">Nome programa</figcaption>
-                            </figure>
-                        </a>
-                    </li>
-                    <li class="filmsBlock__card">
-                        <a href="#">
-                            <figure>
-                                <img src="./assets/img/movies/amigas.jpg" alt="Nome programa">
-                                <figcaption class="hidden">Nome programa</figcaption>
-                            </figure>
-                        </a>
-                    </li>
-                    <li class="filmsBlock__card">
-                        <a href="#">
-                            <figure>
-                                <img src="./assets/img/movies/amigas.jpg" alt="Nome programa">
-                                <figcaption class="hidden">Nome programa</figcaption>
-                            </figure>
-                        </a>
-                    </li>
-                    <li class="filmsBlock__card">
-                        <a href="#">
-                            <figure>
-                                <img src="./assets/img/movies/papel.jpg" alt="Nome programa">
-                                <figcaption class="hidden">Nome programa</figcaption>
-                            </figure>
-                        </a>
-                    </li>
+                <label class="menu__title" for="menu">Navegar</label>
+                <input class="hidden" type="checkbox" id="menu">
+
+                <ul class="menu__list hidden">
+                    <li class="menu__item menu__item--active"><a href="#">Início</a></li>
+                    <li class="menu__item"><a href="#">Séries</a></li>
+                    <li class="menu__item"><a href="#">Filmes</a></li>
+                    <li class="menu__item"><a href="#">Bombando</a></li>
+                    <li class="menu__item"><a href="#">Minha lista</a></li>
+                    <li class="btn__out hidden"><label for="menu"></label></li>
                 </ul>
-            </section>
-
-            <section class="catalogSection">
-                <h2 class="sectionItem sectionTitle">Minha Lista</h2>
-                <ul class="sectionItem filmsBlock flex">
-                    <li class="filmsBlock__card">
-                        <a href="#">
-                            <figure>
-                                <img src="./assets/img/movies/amigas.jpg" alt="Nome programa">
-                                <figcaption class="hidden">Nome programa</figcaption>
-                            </figure>
-                        </a>
-                    </li>
-                    <li class="filmsBlock__card">
-                        <a href="#">
-                            <figure>
-                                <img src="./assets/img/movies/gg.jpg" alt="Nome programa">
-                                <figcaption class="hidden">Nome programa</figcaption>
-                            </figure>
-                        </a>
-                    </li>
-                    <li class="filmsBlock__card">
-                        <a href="#">
-                            <figure>
-                                <img src="./assets/img/movies/papel.jpg" alt="Nome programa">
-                                <figcaption class="hidden">Nome programa</figcaption>
-                            </figure>
-                        </a>
-                    </li>
-                    <li class="filmsBlock__card">
-                        <a href="#">
-                            <figure>
-                                <img src="./assets/img/movies/gg.jpg" alt="Nome programa">
-                                <figcaption class="hidden">Nome programa</figcaption>
-                            </figure>
-                        </a>
-                    </li>
-                    <li class="filmsBlock__card">
-                        <a href="#">
-                            <figure>
-                                <img src="./assets/img/movies/amigas.jpg" alt="Nome programa">
-                                <figcaption class="hidden">Nome programa</figcaption>
-                            </figure>
-                        </a>
-                    </li>
-                    <li class="filmsBlock__card">
-                        <a href="#">
-                            <figure>
-                                <img src="./assets/img/movies/papel.jpg" alt="Nome programa">
-                                <figcaption class="hidden">Nome programa</figcaption>
-                            </figure>
-                        </a>
-                    </li>
-                </ul>
-            </section>
-
-            <section class="catalogSection normalOriginals">
-                <h2 class="sectionItem sectionTitle">Originais Netflix</h2>
-                <ul class="sectionItem filmsBlock flex">
-                    <li class="filmsBlock__card">
-                        <a href="#">
-                            <figure>
-                                <img src="./assets/img/movies/amigas.jpg" alt="Nome programa">
-                                <figcaption class="hidden">Nome programa</figcaption>
-                            </figure>
-                        </a>
-                    </li>
-                    <li class="filmsBlock__card">
-                        <a href="#">
-                            <figure>
-                                <img src="./assets/img/movies/gg.jpg" alt="Nome programa">
-                                <figcaption class="hidden">Nome programa</figcaption>
-                            </figure>
-                        </a>
-                    </li>
-                    <li class="filmsBlock__card">
-                        <a href="#">
-                            <figure>
-                                <img src="./assets/img/movies/papel.jpg" alt="Nome programa">
-                                <figcaption class="hidden">Nome programa</figcaption>
-                            </figure>
-                        </a>
-                    </li>
-                    <li class="filmsBlock__card">
-                        <a href="#">
-                            <figure>
-                                <img src="./assets/img/movies/amigas.jpg" alt="Nome programa">
-                                <figcaption class="hidden">Nome programa</figcaption>
-                            </figure>
-                        </a>
-                    </li>
-                    <li class="filmsBlock__card">
-                        <a href="#">
-                            <figure>
-                                <img src="./assets/img/movies/amigas.jpg" alt="Nome programa">
-                                <figcaption class="hidden">Nome programa</figcaption>
-                            </figure>
-                        </a>
-                    </li>
-                    <li class="filmsBlock__card">
-                        <a href="#">
-                            <figure>
-                                <img src="./assets/img/movies/papel.jpg" alt="Nome programa">
-                                <figcaption class="hidden">Nome programa</figcaption>
-                            </figure>
-                        </a>
-                    </li>
-                </ul>
-            </section>
-
-            <section class="catalogSection largeOriginals hidden">
-                <h2 class="sectionItem sectionTitle">Originais Netflix</h2>
-                <ul class="sectionItem filmsBlock flex">
-                    <li class="filmsBlock__card">
-                        <a href="#">
-                            <figure>
-                                <img src="./assets/img/movies/good.webp" alt="Nome programa">
-                                <figcaption class="hidden">Nome programa</figcaption>
-                            </figure>
-                        </a>
-                    </li>
-                    <li class="filmsBlock__card">
-                        <a href="#">
-                            <figure>
-                                <img src="./assets/img/movies/papel2.webp" alt="Nome programa">
-                                <figcaption class="hidden">Nome programa</figcaption>
-                            </figure>
-                        </a>
-                    </li>
-                    <li class="filmsBlock__card">
-                        <a href="#">
-                            <figure>
-                                <img src="./assets/img/movies/good.webp" alt="Nome programa">
-                                <figcaption class="hidden">Nome programa</figcaption>
-                            </figure>
-                        </a>
-                    </li>
-                    <li class="filmsBlock__card">
-                        <a href="#">
-                            <figure>
-                                <img src="./assets/img/movies/papel2.webp" alt="Nome programa">
-                                <figcaption class="hidden">Nome programa</figcaption>
-                            </figure>
-                        </a>
-                    </li>
-                    <li class="filmsBlock__card">
-                        <a href="#">
-                            <figure>
-                                <img src="./assets/img/movies/good.webp" alt="Nome programa">
-                                <figcaption class="hidden">Nome programa</figcaption>
-                            </figure>
-                        </a>
-                    </li>
-                    <li class="filmsBlock__card">
-                        <a href="#">
-                            <figure>
-                                <img src="./assets/img/movies/papel2.webp" alt="Nome programa">
-                                <figcaption class="hidden">Nome programa</figcaption>
-                            </figure>
-                        </a>
-                    </li>
-                </ul>
-            </section>
-
-            <section class="catalogSection">
-                <h2 class="sectionItem sectionTitle">Programas para toda a família</h2>
-                <ul class="sectionItem filmsBlock flex">
-                    <li class="filmsBlock__card">
-                        <a href="#">
-                            <figure>
-                                <img src="./assets/img/movies/amigas.jpg" alt="Nome programa">
-                                <figcaption class="hidden">Nome programa</figcaption>
-                            </figure>
-                        </a>
-                    </li>
-                    <li class="filmsBlock__card">
-                        <a href="#">
-                            <figure>
-                                <img src="./assets/img/movies/papel.jpg" alt="Nome programa">
-                                <figcaption class="hidden">Nome programa</figcaption>
-                            </figure>
-                        </a>
-                    </li>
-                    <li class="filmsBlock__card">
-                        <a href="#">
-                            <figure>
-                                <img src="./assets/img/movies/papel.jpg" alt="Nome programa">
-                                <figcaption class="hidden">Nome programa</figcaption>
-                            </figure>
-                        </a>
-                    </li>
-                    <li class="filmsBlock__card">
-                        <a href="#">
-                            <figure>
-                                <img src="./assets/img/movies/gg.jpg" alt="Nome programa">
-                                <figcaption class="hidden">Nome programa</figcaption>
-                            </figure>
-                        </a>
-                    </li>
-                    <li class="filmsBlock__card">
-                        <a href="#">
-                            <figure>
-                                <img src="./assets/img/movies/gg.jpg" alt="Nome programa">
-                                <figcaption class="hidden">Nome programa</figcaption>
-                            </figure>
-                        </a>
-                    </li>
-                    <li class="filmsBlock__card">
-                        <a href="#">
-                            <figure>
-                                <img src="./assets/img/movies/papel.jpg" alt="Nome programa">
-                                <figcaption class="hidden">Nome programa</figcaption>
-                            </figure>
-                        </a>
-                    </li>
-                </ul>
-            </section>
-        </main>
-
-        <footer class="mainFooter">
-            <div class="footer__container">
-                <nav class="mainFooter__item">
-                    <ul class="mainFooter__menu flex">
-                        <li><a href="#">Centro de ajuda</a></li>
-                        <li><a href="#">Termos de uso</a></li>
-                        <li><a href="#">Privacidade</a></li>
-                        <li><a href="#">Entre em contato</a></li>
-                    </ul>
-                </nav>
-
-                <ul class="mainFooter__item mainFooter__socials flex">
-                    <li><a href="#"><img src="./assets/img/facebook-app-logo.svg" alt="Facebook"></a></li>
-                    <li><a href="#"><img src="./assets/img/instagram-symbol.svg" alt="Instagram"></a></li>
-                    <li><a href="#"><img src="./assets/img/twitter.svg" alt="Twitter"></a></li>
-                </ul>
-
-                <p class="mainFooter__item mainFooter__copyright">&copy; 1997-2021 Netflix, Inc.</p>
+            </nav>
+            <div class="mainHeader__searchBlock flex">
+                <input class="hidden" type="checkbox" id="searchCheck">
+                <label class="search__button" for="searchCheck">
+                    <span class="hidden">Ícone pesquisar</span>
+                </label>
+                <input class="searchField" type="search" name="" id="searchFieldId">
             </div>
-        </footer>
-    </div>
+            <figure class="mainHeader__user">
+                <img src="./assets/img/user.png" alt="Ícone usuário">
+                <figcaption class="hidden">Ícone usuário</figcaption>
+            </figure>
+    </header>
+    
+    <main class="mainContent flex">
+        <section class="mainContent__secDestaque flex">
+            <figure class="secDestaque__capa flex">
+                <img src="./assets/img/movies/ted.webp" alt="Capa do título seção destaque">
+                <figcaption class="hidden">Capa do título em destaque</figcaption>
+            </figure>
+            <figure class="secDestaque__flexItem secDestaque__arte">
+                <img src="./assets/img/movies/tedlogo.webp" alt="Arte do título em destaque">
+                <figcaption class="hidden">Arte do título em destaque</figcaption>
+            </figure>
+            <div class="secDestaque__flexItem secDestaque__description">
+                <p>Ela o amava e queria acreditar nele. Mas a verdade era monstruosa demais para ser ignorada.</p>
+            </div>
+            <div class="secDestaque__flexItem secDestaque__buttonsBlock">
+                <button class="buttons button__assistir hover">Assistir</button>
+                <button class="buttons Item button__moreInfo hover">Mais informações</button>
+            </div>
+        </section>
+
+        <section class="catalogSection secContWatching">
+            <h2 class="sectionItem sectionTitle">Continuar assistindo</h2>
+            <ul class="sectionItem filmsBlock flex">
+                <li class="filmsBlock__card">
+                    <a href="#">
+                        <figure>
+                            <img src="./assets/img/movies/amigas.jpg" alt="Nome programa">
+                            <figcaption class="hidden">Nome programa</figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li class="filmsBlock__card">
+                    <a href="#">
+                        <figure>
+                            <img src="./assets/img/movies/gg.jpg" alt="Nome programa">
+                            <figcaption class="hidden">Nome programa</figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li class="filmsBlock__card">
+                    <a href="#">
+                        <figure>
+                            <img src="./assets/img/movies/papel.jpg" alt="Nome programa">
+                            <figcaption class="hidden">Nome programa</figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li class="filmsBlock__card">
+                    <a href="#">
+                        <figure>
+                            <img src="./assets/img/movies/amigas.jpg" alt="Nome programa">
+                            <figcaption class="hidden">Nome programa</figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li class="filmsBlock__card">
+                    <a href="#">
+                        <figure>
+                            <img src="./assets/img/movies/amigas.jpg" alt="Nome programa">
+                            <figcaption class="hidden">Nome programa</figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li class="filmsBlock__card">
+                    <a href="#">
+                        <figure>
+                            <img src="./assets/img/movies/papel.jpg" alt="Nome programa">
+                            <figcaption class="hidden">Nome programa</figcaption>
+                        </figure>
+                    </a>
+                </li>
+            </ul>
+        </section>
+
+        <section class="catalogSection">
+            <h2 class="sectionItem sectionTitle">Minha Lista</h2>
+            <ul class="sectionItem filmsBlock flex">
+                <li class="filmsBlock__card">
+                    <a href="#">
+                        <figure>
+                            <img src="./assets/img/movies/amigas.jpg" alt="Nome programa">
+                            <figcaption class="hidden">Nome programa</figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li class="filmsBlock__card">
+                    <a href="#">
+                        <figure>
+                            <img src="./assets/img/movies/gg.jpg" alt="Nome programa">
+                            <figcaption class="hidden">Nome programa</figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li class="filmsBlock__card">
+                    <a href="#">
+                        <figure>
+                            <img src="./assets/img/movies/papel.jpg" alt="Nome programa">
+                            <figcaption class="hidden">Nome programa</figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li class="filmsBlock__card">
+                    <a href="#">
+                        <figure>
+                            <img src="./assets/img/movies/gg.jpg" alt="Nome programa">
+                            <figcaption class="hidden">Nome programa</figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li class="filmsBlock__card">
+                    <a href="#">
+                        <figure>
+                            <img src="./assets/img/movies/amigas.jpg" alt="Nome programa">
+                            <figcaption class="hidden">Nome programa</figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li class="filmsBlock__card">
+                    <a href="#">
+                        <figure>
+                            <img src="./assets/img/movies/papel.jpg" alt="Nome programa">
+                            <figcaption class="hidden">Nome programa</figcaption>
+                        </figure>
+                    </a>
+                </li>
+            </ul>
+        </section>
+
+        <section class="catalogSection normalOriginals">
+            <h2 class="sectionItem sectionTitle">Originais Netflix</h2>
+            <ul class="sectionItem filmsBlock flex">
+                <li class="filmsBlock__card">
+                    <a href="#">
+                        <figure>
+                            <img src="./assets/img/movies/amigas.jpg" alt="Nome programa">
+                            <figcaption class="hidden">Nome programa</figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li class="filmsBlock__card">
+                    <a href="#">
+                        <figure>
+                            <img src="./assets/img/movies/gg.jpg" alt="Nome programa">
+                            <figcaption class="hidden">Nome programa</figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li class="filmsBlock__card">
+                    <a href="#">
+                        <figure>
+                            <img src="./assets/img/movies/papel.jpg" alt="Nome programa">
+                            <figcaption class="hidden">Nome programa</figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li class="filmsBlock__card">
+                    <a href="#">
+                        <figure>
+                            <img src="./assets/img/movies/amigas.jpg" alt="Nome programa">
+                            <figcaption class="hidden">Nome programa</figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li class="filmsBlock__card">
+                    <a href="#">
+                        <figure>
+                            <img src="./assets/img/movies/amigas.jpg" alt="Nome programa">
+                            <figcaption class="hidden">Nome programa</figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li class="filmsBlock__card">
+                    <a href="#">
+                        <figure>
+                            <img src="./assets/img/movies/papel.jpg" alt="Nome programa">
+                            <figcaption class="hidden">Nome programa</figcaption>
+                        </figure>
+                    </a>
+                </li>
+            </ul>
+        </section>
+
+        <section class="catalogSection largeOriginals hidden">
+            <h2 class="sectionItem sectionTitle">Originais Netflix</h2>
+            <ul class="sectionItem filmsBlock flex">
+                <li class="filmsBlock__card">
+                    <a href="#">
+                        <figure>
+                            <img src="./assets/img/movies/good.webp" alt="Nome programa">
+                            <figcaption class="hidden">Nome programa</figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li class="filmsBlock__card">
+                    <a href="#">
+                        <figure>
+                            <img src="./assets/img/movies/papel2.webp" alt="Nome programa">
+                            <figcaption class="hidden">Nome programa</figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li class="filmsBlock__card">
+                    <a href="#">
+                        <figure>
+                            <img src="./assets/img/movies/good.webp" alt="Nome programa">
+                            <figcaption class="hidden">Nome programa</figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li class="filmsBlock__card">
+                    <a href="#">
+                        <figure>
+                            <img src="./assets/img/movies/papel2.webp" alt="Nome programa">
+                            <figcaption class="hidden">Nome programa</figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li class="filmsBlock__card">
+                    <a href="#">
+                        <figure>
+                            <img src="./assets/img/movies/good.webp" alt="Nome programa">
+                            <figcaption class="hidden">Nome programa</figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li class="filmsBlock__card">
+                    <a href="#">
+                        <figure>
+                            <img src="./assets/img/movies/papel2.webp" alt="Nome programa">
+                            <figcaption class="hidden">Nome programa</figcaption>
+                        </figure>
+                    </a>
+                </li>
+            </ul>
+        </section>
+
+        <section class="catalogSection">
+            <h2 class="sectionItem sectionTitle">Programas para toda a família</h2>
+            <ul class="sectionItem filmsBlock flex">
+                <li class="filmsBlock__card">
+                    <a href="#">
+                        <figure>
+                            <img src="./assets/img/movies/amigas.jpg" alt="Nome programa">
+                            <figcaption class="hidden">Nome programa</figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li class="filmsBlock__card">
+                    <a href="#">
+                        <figure>
+                            <img src="./assets/img/movies/papel.jpg" alt="Nome programa">
+                            <figcaption class="hidden">Nome programa</figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li class="filmsBlock__card">
+                    <a href="#">
+                        <figure>
+                            <img src="./assets/img/movies/papel.jpg" alt="Nome programa">
+                            <figcaption class="hidden">Nome programa</figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li class="filmsBlock__card">
+                    <a href="#">
+                        <figure>
+                            <img src="./assets/img/movies/gg.jpg" alt="Nome programa">
+                            <figcaption class="hidden">Nome programa</figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li class="filmsBlock__card">
+                    <a href="#">
+                        <figure>
+                            <img src="./assets/img/movies/gg.jpg" alt="Nome programa">
+                            <figcaption class="hidden">Nome programa</figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li class="filmsBlock__card">
+                    <a href="#">
+                        <figure>
+                            <img src="./assets/img/movies/papel.jpg" alt="Nome programa">
+                            <figcaption class="hidden">Nome programa</figcaption>
+                        </figure>
+                    </a>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="mainFooter">
+        <div class="footer__container">
+            <nav class="mainFooter__item">
+                <ul class="mainFooter__menu flex">
+                    <li><a href="#">Centro de ajuda</a></li>
+                    <li><a href="#">Termos de uso</a></li>
+                    <li><a href="#">Privacidade</a></li>
+                    <li><a href="#">Entre em contato</a></li>
+                </ul>
+            </nav>
+
+            <ul class="mainFooter__item mainFooter__socials flex">
+                <li><a href="#"><img src="./assets/img/facebook-app-logo.svg" alt="Facebook"></a></li>
+                <li><a href="#"><img src="./assets/img/instagram-symbol.svg" alt="Instagram"></a></li>
+                <li><a href="#"><img src="./assets/img/twitter.svg" alt="Twitter"></a></li>
+            </ul>
+
+            <p class="mainFooter__item mainFooter__copyright">&copy; 1997-2021 Netflix, Inc.</p>
+        </div>
+    </footer>
 </body>
 </html>
