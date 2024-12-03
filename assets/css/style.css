@@ -1,103 +1,507 @@
 
-/*
-Theme Name: Landing Page Kenzie Academy
-Theme URI: https://kenzie.com.br/
-Author: Kenzie Academy 
-Author URI: https://kenzie.com.br/
-Description: Descrção do thema.
-Version: 1.0
-Text Domain: https://kenzie.com.br/
-
---------------------------------------------
-ESTRUTURAÇÃO BASE
---------------------------------------------
-**** DECLARAÇÃO DE VARIÁVEIS
-**** ESTILOS GERAIS
-**** BODY
-**** HEADER
-**** FOOTER
-**** PÁGINA INICIAL
-**** EXTRAS
-**** @MEDIA
-
-family=Montserrat -> Menus
-family=Lato -> Títulos, textos
-*/
-
-/* FONTS */
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-/* FONTS */
 
-/* VARIÁVEIS */
-:root{}
-  
-/* GERAL */
+:root{
+    --background-color-principal: #141414;
+    --font-color-principal: white;
+    --fontColor-secondary: #e5e5e5;
+    --menu-fontColor-active: white;
+    --menu-fontColor-hover: #b3b3b3;
+}
+
 html, body, figure, div, input, textarea, p, h1, h2, h3, h4, h5, h6, ul{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: 'Helvetica Neue', Helvetica, Arial,sans-serif;
     list-style: none;
 }
-img{
-    max-width: 800px;
+
+figure {
+    line-height: 0;
 }
-div.flex{
+img{
+    width: 100%;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.flex{
     display: flex;
 }
-div.full-container{
-    width: 100%;
-    max-width: 1850px;
-    margin:0 auto;
+
+.hidden {
+    display: none;
 }
-div.large-container{
-    width: 100%;
-    max-width: 1170px;
-    margin:0 auto;
+
+body {
+    background: var(--background-color-principal);
 }
-div.container{
-    width: 100%;
-    max-width: 1140px;
-    margin:0 auto;
+
+.mainContainer {
+    flex-direction: column;
+    color: var(--font-color-principal);
+    position: relative;
+    max-width: 1735px;
+    margin: 0 auto;
 }
-/* GERAL */
-  
-/* HTML */
-html{}
-/* HTML */
-  
-/* BODY */
-body{}
-/* BODY */
-  
-/* HEADER */
-header{}
-/* HEADER */
-  
-/* FOOTER */
-footer{}
-/* FOOTER */
 
-/* INICIAL */
-main{}
-/* INICIAL */
+.mainHeader {
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+}
 
-/* EXTRAS */
+    .mainHeader__Logo {
+        max-width: 70px;
+    }
 
-/* para estilizar a scrollbar */
-::-webkit-scrollbar{}
-::-webkit-scrollbar-button{}
-::-webkit-scrollbar-track{}
-::-webkit-scrollbar-track-piece{}
-::-webkit-scrollbar-thumb{}
-::-webkit-scrollbar-corner{}
-::-webkit-resizer{}
+    .mainHeader__menu {
+        flex: 1;
+        padding-left: 30px;
+        font-size: 0.6em;
+    }
 
-/* EXTRAS */
-  
+        .menu__title::after {
+            content: "\25bc";
+            margin-left: 5px;
+            font-size: 1.2em;
+        }
+        
+        #menu:checked ~ .menu__list {
+            position: fixed;
+            right: 0;
+            left: 0;
+            top: 0;
+            height: 100vh;
+            background: rgb(20 20 20 / 90%);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end; 
+            align-content: center;
+            align-items: center;
+            font-size: 5vmin;
+            line-height: 2em;
+            color: var(--fontColor-secondary);
+            z-index: 1; 
+        }
 
-/* MEDIA QUERIES */
-    @media screen and (min-width: 400px) {}
-  
-    @media screen and (min-width: 800px) {}
-/* MEDIA QUERIES */
+        #menu:checked ~ .menu__list .btn__out {
+            height: 40vh;
+            display: flex;
+            align-items: flex-end;
+            box-sizing: border-box;
+            padding-bottom: 10px;
+        }
+
+        #menu:checked ~ .menu__list .btn__out label::after {
+            content: "\2715";
+            background: white;
+            display: block;
+            height: 15vmin;
+            width: 15vmin;
+            color: black;
+            font-size: 8vmin;
+            line-height: 15vmin;
+            text-align: center;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+            #menu:checked ~ .menu__list .menu__item:first-child {
+                font-size: 1.1em;
+                font-weight: bold;
+                color: white;
+                text-shadow: 2px 2px 3px gray, 2px -2px 3px gray;
+            }
+    
+    .mainHeader__user {
+        width: 28px;
+    }
+    
+        .mainHeader__user img {
+            border-radius: 8px;
+        }
+
+    .mainHeader__searchBlock {
+        margin-right: 20px;
+        cursor: pointer;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        width: 50px;
+    }
+
+        .search__button {
+            transform: rotate(-45deg);
+            position: relative;
+            right: 0;
+            transition: right .3s;
+        }
+
+        .search__button:active {
+            color: grey;
+        }
+
+        .search__button::before {
+            content: "\26b2";
+            font-size: 25px;
+        }
+
+        .searchField {
+            position: relative;
+            top: -60px;
+            transition: .2s;
+            border-radius: 10px;
+            outline: none;
+        }
+
+        #searchCheck:checked ~ .searchField {
+            left: 54px;
+            top: 28px;
+            padding: 0 30px 0 10px;
+            height: 27px;
+            width: 250px;
+        }
+
+        #searchCheck:checked ~ .search__button {
+            color: gray;
+            right: 24px;
+            z-index: 1;
+        }
+        
+.mainContent {
+    flex-direction: column;
+}
+
+    .mainContent__secDestaque {
+        flex-direction: column;
+        padding: 0 30px;
+        font-size: 12px;
+    }
+
+        .secDestaque__flexItem {
+            margin-top: 10px;
+        }
+        
+        .secDestaque__capa {
+            justify-content: center;
+            position: fixed;
+            right: 0;
+            left: 0;
+            top: 0;
+            z-index: -1;
+        }
+
+        .secDestaque__capa::before {
+            content: "";
+            background: linear-gradient(to bottom, rgb(0 0 0 / 80%), rgb(0 0 0 / 0), 40%, rgb(0 0 0 / 10%), 93%, rgb(0 0 0 / 70%));
+            position: absolute;
+            height: 100%;
+            right: 0;
+            left: 0;
+            top: 0;
+        }
+
+        .secDestaque__arte {
+            max-width: 160px;
+        }
+
+        .secDestaque__description {
+            width: 50%;
+            text-shadow: 2px 2px 4px rgb(0 0 0 / 45);
+        }
+
+            .buttons {
+                background: rgb(109 109 110 / 70%);
+                border: none;
+                border-radius: 5px;
+                font-size: 12px;
+                line-height: 2em;
+                margin-right: 5px;
+                padding: 0 15px;
+                color: inherit;
+
+            }
+
+            .button__assistir {
+                background: white;
+                color: black;
+            }
+
+            .button__assistir::before {
+                content: "\25b6";
+                margin-right: 10px;
+            }
+
+            .button__moreInfo::before {
+                content: "i";
+                margin-right: 5px;
+                display: inline-block;
+                padding: 0 0.4em;
+                line-height: 1em;
+                border: solid 2px;
+                border-radius: 50%;
+                font-weight: bold;
+            }
+
+    .catalogSection:nth-child(n + 3) {
+        padding-top: 20px;
+        background: var(--background-color-principal);
+    }
+
+    .catalogSection {
+        padding-bottom: 50px;
+    }
+
+        .catalogSection:last-child {
+            padding-bottom: 100px;
+        }
+
+        .sectionItem {
+            padding: 0 30px;
+        }
+
+        .sectionTitle {
+            font-size: 17px;
+            line-height: 1.5em;
+        }
+
+        .filmsBlock {
+            flex-wrap: wrap;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+            .filmsBlock__card {
+                width: calc(50% - 2px);
+                max-width: 50%;
+            }
+
+            .filmsBlock__card img {
+                border-radius: 8px;
+            }
+
+        .secContWatching {
+            background: linear-gradient(to bottom,rgba(20,20,20,0) 0,rgba(20,20,20,.15) 15%,rgba(20,20,20,.35) 29%,rgba(20,20,20,.58) 44%,#141414 68%,#141414 100%);
+        }
+        
+.mainFooter{
+    color: gray;
+    background: var(--background-color-principal);
+}
+
+    .footer__container {
+        padding: 30px 30px 20px;
+    }
+
+        .mainFooter__item {
+            margin-top: 20px;
+        }
+
+        .mainFooter__menu {
+            flex-wrap: wrap;
+            font-size: 13px;
+        }
+
+            .mainFooter__menu li {
+                width: 50%;
+                margin: 5px 0;
+            }
+
+        .mainFooter__socials {
+            width: 50%;
+            justify-content: space-between;
+        }
+
+            .mainFooter__socials li {
+                width: 20px;
+            }
+
+        .mainFooter__copyright {
+            font-size: 11px;
+        }
+        
+@media screen and (min-width: 550px) {
+    #searchCheck:checked ~ .searchField {
+        left: 0;
+        top: 0;
+        height: unset;
+    }
+}
+        
+@media screen and (min-width: 800px) {
+
+    .hover {
+        cursor: pointer;
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+        background: var(--background-color-principal);
+    }
+
+    .mainHeader {
+        padding: 20px 60px;
+        background: linear-gradient(to bottom, rgba(0,0,0,.7) 10%, rgba(0,0,0,0));
+    }
+    
+        .mainHeader__Logo {
+            max-width: 92px;
+        }
+        
+        .mainHeader__user {
+            width: 32px;
+        }
+        
+        .menu__title {
+            display: none;
+        }
+        
+        .menu__list {
+            display: flex;
+            color: var(--fontColor-secondary);
+            font-size: 14px;
+        }
+        
+            .menu__item {
+                margin: 0 10px;
+            }
+            
+                .menu__item--active {
+                    color: var(--menu-fontColor-active);
+                    font-weight: bold;
+                }
+                
+                .menu__item:hover {
+                    color: var(--menu-fontColor-hover);
+                }
+
+#searchCheck:checked ~ .searchField {
+   width: 130px;
+}
+    
+    .mainContent__secDestaque {
+        padding: 6% 30% 6% 60px;
+        font-size: 26px;
+    }
+    
+        .secDestaque__flexItem {
+            margin-top: 1em;
+        }
+    
+        .secDestaque__capa img {
+            width: 100%;
+        }
+    
+        .secDestaque__arte{
+            max-width: 650px;
+        }
+    
+            .secDestaque__arte img {
+                width: 100%;
+            }
+    
+        .buttons {
+            font-size: 22px;
+        }
+        
+            .button__moreInfo:hover {
+                background-color: rgb(109 109 110 / 40%);
+            }
+            
+            .button__assistir:hover {
+                background: rgb(255 255 255 / 75%);
+            }
+
+    .sectionItem {
+        padding: 0 60px;
+    }
+    
+    .normalOriginals {
+        display: none;
+    }
+
+    .largeOriginals {
+        display: block;
+    }
+
+    .sectionTitle {
+        font-size: 26px;
+        color: var(--fontColor-secondary);
+    }
+
+    .filmsBlock {
+        flex-wrap: nowrap;
+    }
+    
+        .filmsBlock__card {
+            max-width: 287px;
+        }
+        
+        .filmsBlock__card:nth-child(-n + 5) figure{
+            padding-right: 5px;
+        }
+
+    .mainFooter {
+        padding: 0px 22%;
+    }
+
+    .footer__container {
+        padding: 20px 0 30px;
+        border-top: solid 1px rgb(128 128 128 / 26%);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .mainFooter__menu li {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .mainFooter__socials {
+        width: 100px;
+        justify-content: space-between;
+    }
+
+    .mainFooter__copyright {
+        width: 100%;
+    }
+    
+}
+
+@media screen and (min-width: 900px) {
+    #searchCheck:checked ~ .searchField {
+        width: 200px;
+     }
+}
+
+@media screen and (min-width: 1735px) {
+    
+    .mainHeader {
+        /* padding: 20px 0; */
+    }
+    
+    .sectionItem {
+        padding: 0;
+    }
+
+    .filmsBlock__card:nth-child(-n + 5) figure{
+        padding-right: 0;
+    }
+    
+    .mainContainer {
+        position: relative;
+    }
+    
+    .mainContainer, .secDestaque__capa {
+        width: 100%;
+    }
+
+    .secDestaque__capa {
+        position: absolute;
+    }
+}
